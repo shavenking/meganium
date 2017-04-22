@@ -18,7 +18,8 @@ $uri = rawurldecode($uri);
 $routeInfo = $dispatcher->dispatch($httpMethod, $uri);
 
 if (FastRoute\Dispatcher::FOUND !== $routeInfo[0]) {
-    // gg886
+    echo '404';
+    exit(0);
 }
 
 $handler = $routeInfo[1];
